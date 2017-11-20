@@ -6,7 +6,11 @@
 	<groupId>com.venus.boot</groupId>
 	<artifactId>venus-boot-orika</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <modules>
+        <module>venusbootstarterorika</module>
+		<module>venus-boot-orika-samples</module>
+	</modules>
+    <packaging>pom</packaging>
 
 	<name>venus-boot-orika</name>
 	<description>Demo project for Spring Boot</description>
