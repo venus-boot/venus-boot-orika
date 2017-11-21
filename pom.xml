@@ -7,9 +7,9 @@
 	<artifactId>venus-boot-orika</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>venusbootstarterorika</module>
 		<module>venus-boot-orika-samples</module>
-	</modules>
+        <module>venus-boot-starter-orika</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>venus-boot-orika</name>

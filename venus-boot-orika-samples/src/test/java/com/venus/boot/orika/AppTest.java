@@ -1,4 +1,4 @@
-package com.venus.boot;
+package com.venus.boot.orika;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
