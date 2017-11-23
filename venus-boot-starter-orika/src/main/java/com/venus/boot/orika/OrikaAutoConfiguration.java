@@ -26,21 +26,22 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OrikaAutoConfiguration {
 
-    /**
-     * The configuration properties for Orika.
-     */
-    private final OrikaProperties orikaProperties;
+  /**
+   * The configuration properties for Orika.
+   */
+  private final OrikaProperties orikaProperties;
 
-    /**
-     * The configurers for {@link MapperFactoryBuilder}.
-     */
-    private final Optional<List<OrikaMapperFactoryBuilderConfigurer>> orikaMapperFactoryBuilderConfigurers;
+  /**
+   * The configurers for {@link MapperFactoryBuilder}.
+   */
+  private final Optional<List<OrikaMapperFactoryBuilderConfigurer>> orikaMapperFactoryBuilderConfigurers;
 
-    /**
-     * The configurers for {@link MapperFactory}.
-     */
-    private final Optional<List<OrikaMapperFactoryConfigurer>> orikaMapperFactoryConfigurers;
+  /**
+   * The configurers for {@link MapperFactory}.
+   */
+  private final Optional<List<OrikaMapperFactoryConfigurer>> orikaMapperFactoryConfigurers;
 
+  
     /**
      * Creates a {@link MapperFactoryBuilder}.
      *
@@ -71,7 +72,7 @@ public class OrikaAutoConfiguration {
         orikaMapperFactoryBuilderConfigurers
                 .orElseGet(Collections::emptyList)
                 .forEach(configurer -> configurer.configure(orikaMapperFactoryBuilder));
-        log.debug("Created a MapperFactoryBuilder: [{}]", orikaMapperFactoryBuilder);
+        //log.debug("Created a MapperFactoryBuilder: [{}]", orikaMapperFactoryBuilder);
         return orikaMapperFactoryBuilder;
     }
 
@@ -88,7 +89,7 @@ public class OrikaAutoConfiguration {
         orikaMapperFactoryConfigurers
                 .orElseGet(Collections::emptyList)
                 .forEach(configurer -> configurer.configure(orikaMapperFactory));
-        log.debug("Created a MapperFactory: [{}]", orikaMapperFactory);
+        //log.debug("Created a MapperFactory: [{}]", orikaMapperFactory);
         return orikaMapperFactory;
     }
 
@@ -102,7 +103,7 @@ public class OrikaAutoConfiguration {
     @Bean
     public MapperFacade orikaMapperFacade(MapperFactory orikaMapperFactory) {
         MapperFacade orikaMapperFacade = orikaMapperFactory.getMapperFacade();
-        log.debug("Created a MapperFacade: [{}]", orikaMapperFacade);
+        //log.debug("Created a MapperFacade: [{}]", orikaMapperFacade);
         return orikaMapperFacade;
     }
 
