@@ -9,10 +9,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * The sample application of "orika-spring-boot-starter".
- * Maps {@link PersonSource} to {@link PersonDestination}.
- */
+
 @RequiredArgsConstructor
 @SpringBootApplication
 public class VenusBootOrikaApplication implements ApplicationRunner {
@@ -21,6 +18,11 @@ public class VenusBootOrikaApplication implements ApplicationRunner {
      * The Orika's mapper interface.
      */
     private final MapperFacade orikaMapperFacade;
+
+    public VenusBootOrikaApplication(MapperFacade orikaMapperFacade) {
+      super();
+      this.orikaMapperFacade = orikaMapperFacade;
+    }
 
     /** {@inheritDoc} */
     @Override
@@ -37,11 +39,6 @@ public class VenusBootOrikaApplication implements ApplicationRunner {
 
     }
 
-    /**
-     * The entry point of application.
-     *
-     * @param args unused.
-     */
     public static void main(String[] args) {
         SpringApplication.run(VenusBootOrikaApplication.class, args);
     }
