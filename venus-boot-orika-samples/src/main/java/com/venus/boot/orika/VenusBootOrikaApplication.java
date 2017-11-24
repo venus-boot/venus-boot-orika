@@ -2,7 +2,6 @@ package com.venus.boot.orika;
 
 import com.venus.boot.orika.model.PersonDestination;
 import com.venus.boot.orika.model.PersonSource;
-import lombok.RequiredArgsConstructor;
 import ma.glasnost.orika.MapperFacade;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -10,7 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@RequiredArgsConstructor
 @SpringBootApplication
 public class VenusBootOrikaApplication implements ApplicationRunner {
 
